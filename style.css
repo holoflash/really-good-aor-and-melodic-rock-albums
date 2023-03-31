@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Poppins&display=swap');
+
+:root {
+    --background-main: #3b3b3b;
+    --background-sub: #000000;
+    --main-font: #ffff;
+    --main-width: 300px;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: var(--main-font);
+    background: linear-gradient(var(--background-main), black);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    padding-block: 20px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--background-sub);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--header-font);
+    font-size: 1rem;
+    letter-spacing: 1rem;
+}
+
+.content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#album {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    padding: 20px;
+    background-color: var(--background-sub);
+    min-width: var(--main-width);
+}
+
+#title {
+    grid-area: title;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+    max-width: var(--main-width);
+}
+
+img {
+    grid-area: img;
+    width: var(--main-width);
+    height: var(--main-width);
+}
+
+ol {
+    list-style: none;
+}
+
+li {
+    counter-increment: item;
+    margin-bottom: 5px;
+}
+li:before {
+    margin-right: 10px;
+    content: counter(item);
+    color: var(--header-font);
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
+}
