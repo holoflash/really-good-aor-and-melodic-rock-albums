@@ -25,6 +25,7 @@ html {
 
 header {
     padding-block: 20px;
+    outline: solid rgb(97, 97, 97) 1px;
     position: sticky;
     top: 0;
     left: 0;
@@ -53,7 +54,8 @@ header {
     margin: 10px;
     padding: 20px;
     background-color: var(--background-sub);
-    min-width: var(--main-width);
+
+    height: 350px;
 }
 
 #title {
