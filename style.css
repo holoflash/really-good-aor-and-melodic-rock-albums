@@ -1,16 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
-    --background-main: #3b3b3b;
-    --background-sub: #000000;
-    --main-font: #ffff;
+    --background-main: #1e2126;
+    --background-sub: #00000075;
+    --main-font: #ffffff;
     --main-width: 300px;
 }
 
 * {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
+header {
+    position: sticky;
+    top: 0;
+    background-color: #000000a2;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1rem;
+    padding-block: 20px;
+}
+@media only screen and (max-width: 1000px) {
+    header {
+        display: none;
+    }
+}
+
+footer {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 0.8rem;
+    padding-block: 20px;
+    color: rgba(255, 255, 255, 0.297);
+}
 body,
 html {
     width: 100%;
@@ -18,21 +40,9 @@ html {
     margin: 0;
     padding: 0;
     color: var(--main-font);
-    background: linear-gradient(var(--background-main), rgb(21, 21, 21));
+    background-color: var(--background-main);
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
-
-header {
-    padding-block: 20px;
-    outline: solid rgb(97, 97, 97) 1px;
-    width: 100%;
-    background-color: var(--background-sub);
-    text-align: center;
-    text-transform: uppercase;
-    color: var(--header-font);
-    font-size: 1rem;
-    letter-spacing: 1rem;
 }
 
 .content {
@@ -46,28 +56,25 @@ header {
     display: flex;
     flex-direction: column;
     width: fit-content;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin: 10px;
-    padding: 20px;
+    padding: 10px;
     background-color: var(--background-sub);
-    height: 350px;
+    height: 360px;
+    box-shadow: 0px -10px 10px rgba(0, 0, 0, 0.138);
+    border-radius: 2px;
 }
 
 #title {
-    grid-area: title;
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-align: center;
     margin: 0;
-    padding: 0;
-    padding-top: 20px;
     max-width: var(--main-width);
 }
-
 img {
-    grid-area: img;
-    width: var(--main-width);
-    height: var(--main-width);
+    outline: dotted rgb(74, 74, 74) 1px;
+    padding: 5px;
 }
 
 ol {
